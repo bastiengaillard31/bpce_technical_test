@@ -1,0 +1,80 @@
+<div *ngIf="launch">
+    <div class="container">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title>Rocket detail</mat-card-title>
+                    <mat-card-subtitle>{{launch.rocket.configuration.name}}</mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>
+                        <span matListItemTitle>Full name</span>
+                        <span matListItemLine>{{launch.rocket.configuration.full_name}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Family</span>
+                        <span matListItemLine>{{launch.rocket.configuration.family}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Variant</span>
+                        <span matListItemLine>{{launch.rocket.configuration.variant}}</span>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="container">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title>Launch area detail</mat-card-title>
+                    <mat-card-subtitle>{{launch.pad.name}}</mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item *ngIf="launch.pad.description">
+                        <span matListItemTitle>Description</span>
+                        <span matListItemLine>{{launch.pad.description}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Latitude</span>
+                        <span matListItemLine>{{launch.pad.latitude}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Longitude</span>
+                        <span matListItemLine>{{launch.pad.longitude}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Location</span>
+                        <span matListItemLine>{{launch.pad.location.name}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Map URL</span>
+                        <span matListItemLine>{{launch.pad.map_url}}</span>
+                    </mat-list-item>
+
+
+                    <mat-list-item>
+                        <span matListItemTitle>Wiki</span>
+                        <span matListItemLine>{{launch.pad.wiki_url}}</span>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <span matListItemTitle>Agencie</span>
+                        <span matListItemLine>{{launch.launch_service_provider.name}}</span>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

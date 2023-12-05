@@ -1,0 +1,17 @@
+<div class="container" *ngFor="let launch of (launches$ | async)">
+    <a routerLink="launch/{{launch.id}}" routerLinkActive="active">
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>{{launch.name}}</mat-card-title>
+                <mat-card-subtitle>{{launch.status.name}}</mat-card-subtitle>
+                <img mat-card-sm-image src={{launch.image}}>
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+              Launch window - {{launch.window_start |  date: 'yyyy/MM/dd HH:mm' }} to {{launch.window_end |  date: 'yyyy/MM/dd HH:mm'}}
+            </mat-card-content>
+          </mat-card>
+    </a>
+</div>
+<br>
