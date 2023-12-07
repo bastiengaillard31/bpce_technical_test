@@ -9,9 +9,17 @@ import { selectLaunches } from '../../state/launches.selectors';
 })
 export class LaunchesComponent {
   launches$ = this.store.select(selectLaunches);
+  existLaunches: boolean = false;
 
-  constructor(private store: Store) { }
+  constructor(private store: Store) {  }
 
+  ngOnInit() {
+    this.launches$.subscribe(launches => {
+      if(launches.length) {
+        this.existLaunches = true;
+      }
+    })
+  }
 
   getColorClass(status: string) {
 
