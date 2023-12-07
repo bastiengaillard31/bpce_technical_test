@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LaunchDetailComponent } from './components/launch-detail/launch-detail.component';
 import { LaunchesComponent } from './components/launches/launches.component';
 import { launchesReducer } from './state/launches.reducer';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { launchesReducer } from './state/launches.reducer';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideClientHydration()

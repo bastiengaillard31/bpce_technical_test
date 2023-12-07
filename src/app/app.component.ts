@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LaunchService } from './services/launch-service.service';
+import { LaunchService } from './services/launch.service';
 import { Store } from '@ngrx/store';
 import { LaunchesApiActions } from './state/launches.actions';
 

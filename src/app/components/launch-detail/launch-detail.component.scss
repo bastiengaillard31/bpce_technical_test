@@ -1,4 +1,12 @@
 mat-card {
-    width: 600px;
+    width: 800px;
     margin-top:  15px;
+
+    mat-card-title {
+        color: var(--title-color);
+    }
+}
+
+mat-spinner {
+    margin-top: 50px;
 }

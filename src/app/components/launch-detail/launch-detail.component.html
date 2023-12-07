@@ -1,3 +1,7 @@
+<div class="container" *ngIf="!launch">
+    <mat-spinner diameter="30"></mat-spinner>
+</div>
+
 <div *ngIf="launch">
     <div class="container">
         <mat-card>
@@ -19,7 +23,7 @@
                         <span matListItemLine>{{launch.rocket.configuration.family}}</span>
                     </mat-list-item>
 
-                    <mat-list-item>
+                    <mat-list-item *ngIf="launch.rocket.configuration.variant">
                         <span matListItemTitle>Variant</span>
                         <span matListItemLine>{{launch.rocket.configuration.variant}}</span>
                     </mat-list-item>
@@ -60,13 +64,14 @@
 
                     <mat-list-item>
                         <span matListItemTitle>Map URL</span>
-                        <span matListItemLine>{{launch.pad.map_url}}</span>
+                        <span matListItemLine><a href={{launch.pad.map_url}} target="_blanck">{{launch.pad.map_url}}</a></span>
                     </mat-list-item>
 
 
-                    <mat-list-item>
+                    <mat-list-item *ngIf="launch.pad.wiki_url">
                         <span matListItemTitle>Wiki</span>
-                        <span matListItemLine>{{launch.pad.wiki_url}}</span>
+                        <span matListItemLine><a href={{launch.pad.wiki_url}}
+                                target="_blanck">{{launch.pad.wiki_url}}</a> </span>
                     </mat-list-item>
 
                     <mat-list-item>

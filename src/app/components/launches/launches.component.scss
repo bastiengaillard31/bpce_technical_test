@@ -2,4 +2,23 @@ mat-card {
     width: 600px;
     margin-top:  15px;
 
+    mat-card-title {
+        color: var(--title-color);
+    }
+
+    .green-text {
+        color: #29D02F;
+    }
+
+    .red-text {
+        color: #D10911;
+    }
+
+    .orange-text {
+        color: #F59720;
+    }
+
+    .blue-text {
+        color: #72B6FF;
+    }
 }

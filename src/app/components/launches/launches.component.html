@@ -4,7 +4,7 @@
             <mat-card-header>
               <mat-card-title-group>
                 <mat-card-title>{{launch.name}}</mat-card-title>
-                <mat-card-subtitle>{{launch.status.name}}</mat-card-subtitle>
+                <mat-card-subtitle [ngClass]="getColorClass(launch.status.name)">{{launch.status.name}}</mat-card-subtitle>
                 <img mat-card-sm-image src={{launch.image}}>
               </mat-card-title-group>
             </mat-card-header>
