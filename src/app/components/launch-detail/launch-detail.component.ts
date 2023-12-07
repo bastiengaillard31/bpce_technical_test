@@ -27,7 +27,6 @@ export class LaunchDetailComponent {
             (data) => {
               if(data) {
                 this.launch = data;
-                console.log(this.launch)
               } else {
                 this.router.navigate(['/error']);
               }
